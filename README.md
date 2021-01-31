@@ -6,12 +6,20 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+**The given dataset contains marketing data of a bank and the sample dataset is provided by Azure at:
+https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv
+
+Best Performing Model: In this given dataset, 
+
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
 
 ## Scikit-learn Pipeline
-**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+(i) Data is loaded as a very first step, which is imported from TabularDatasetFactory. (ii) Data cleaning: Hot encoding 
+was used as columns have categorical data.  (iii)Data split was used as 0.7:0.3 for traning and testing datasets respectively
+(iv)Hyperparameters were chosen with Random Sampling and regression models were used for traning with hyperparameters (C, max_iter)
+(v) once the experiment is completed, BanditPolicy was used for early termination. This was we can save further use of resources by
+stopping the hyperparameter run. (vi)  using hyperparametrs, the best model was observed and then saved
 
 **What are the benefits of the parameter sampler you chose?**
 
