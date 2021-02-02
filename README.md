@@ -60,11 +60,11 @@ the best model was generated using **VotingEnsemble Algorithm** which involves s
 classification models and give us an  **Accuracy of 0.9170**
 
 Voting Ensemble Algorithm: A voting ensemble is an ensemble machine learning model, which combines the predictions from
- multiple other models. It can be used for classification (Predictions are the majority vote of contributing models.)
- or regression (Predictions are the average of contributing models). A Voting Ensemble is appropriate when multiple
- models perform well on the task and agree with the results. This algorithm treats all models same which means all models
- contribute equally to prediction. But some models may perform good in some situations or poor in other situation.
- To address this issue, weighted average or weighted Voting is used.
+multiple other models. It can be used for classification (Predictions are the majority vote of contributing models.)
+or regression (Predictions are the average of contributing models). A Voting Ensemble is appropriate when multiple
+models perform well on the task and agree with the results. This algorithm treats all models same which means all models
+contribute equally to prediction. But some models may perform good in some situations or poor in other situation.
+To address this issue, weighted average or weighted Voting is used.
 
 ## Pipeline comparison
 The AutoML  approach generated multiple models and tested/optimized on different hyperparameters.
