@@ -42,9 +42,16 @@ defined search space. Random sampling allows the search space to include both di
 A sample mean tends to be a good estimate of th a large dataset when samples are randomly selected over and over again
 and calculates sample mean each time, so it gives the corerct values. 
 
+Random Sampling supports both discrete and continuous hyperparameters and these values are randomly defined in the search space.
+It supports the early termination of low-performance runs. Grid does support early termination, but allows only discreate hyperparameters
+and that too on higher budget. 
+
+
 **Benefits of the chosen early stopping policy** : We then define our termination Policy for every run using **BanditPolicy** based
 on a slack factor  of 0.1. Bandit is based on slack factor/slack amount and evaluation interval. Bandit terminates runs where
 the primary metric is not within the specified slack factor/slack amount (in this case  = 0.1) compared to the best performing run.
+The use of slack factor give better control when we define the policy, which is absent in other early termination policies.
+
 The early termination policy is applied at every interval when metrics are reported, starting at evaluation interval of 2. 
 Any run whose best metric is less than (1/(1+0.1) or 91% of the best performing run will be terminated. This means poorly
 performing will be terminated, so overall cost will be reduced.
