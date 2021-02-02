@@ -52,12 +52,11 @@ on a slack factor  of 0.1. Bandit is based on slack factor/slack amount and eval
 the primary metric is not within the specified slack factor/slack amount (in this case  = 0.1) compared to the best performing run.
 
 The use of slack factor give better control when we define the policy, which is absent in other early termination policies.
-Bandit compares slack factor using the best performin run, that is the davantage over other early termination policies
+Bandit policy uses the best performin run in the analysis, whereas other early terminations policies use either avarages or percentage.
 
 Bandit, the early termination policy is applied at every interval when metrics are reported, starting at evaluation interval of 2. 
 Any run whose best metric is less than (1/(1+0.1) or 91% of the best performing run will be terminated. This means poorly
 performing will be terminated, so overall cost will be reduced.
-
 
 
 
