@@ -27,15 +27,14 @@ satisfied we registerd our model for future use. In this case the best model was
 Parameters: 
 Logistic Regression Model was used for training with hyperparameter tuning such as C and max_iter using HyperDrive.
 A model parameter is a configuration variable that is internal to the model. They are required by the model when
- making predictions.Parameter C is a continuous or discrete parameter or  and max_iter parameter is Maximum number of iterations
+making predictions.Parameter C is a continuous or discrete parameter or  and max_iter parameter is Maximum number of iterations
 taken to converge to  take full advantage of randomization.
 
  **C** and **max_iter** parameters with random sampling **RandomParameterSampling** 
  try different possible configuration with  'C' and 'max_iter' values, that tends
 to maximize primary metric in defined search space.
 
-Benefits of Random Parameter Sampling: 
-Random Sampling is used to choose the hyperparameters as it is good for getting some values of hyperparameters
+Benefits of Random Parameter Sampling: Random Sampling is used to choose the hyperparameters as it is good for getting some values of hyperparameters
 that one cannot guess intuitively. Random sampling would mean that we will cover most of the sample space and will get the best model.
 
 In random parameter sampling, hyperparameter values are randomly selected from the
@@ -43,13 +42,12 @@ defined search space. Random sampling allows the search space to include both di
 A sample mean tends to be a good estimate of th a large dataset when samples are randomly selected over and over again
 and calculates sample mean each time, so it gives the corerct values. 
 
-**Benefits of the chosen early stopping policy **
-We then define our termination Policy for every run using **BanditPolicy** based on a slack factor  of 0.1.
-Bandit is based on slack factor/slack amount and evaluation interval. Bandit terminates runs where the primary metric
-is not within the specified slack factor/slack amount (in this case  = 0.1) compared to the best performing run.
-The early termination policy is applied at every interval when metrics are reported, starting at
-evaluation interval of 2. Any run whose best metric is less than (1/(1+0.1) or 91% of the best performing run will be
-terminated. This means poorly performing will be terminated, so overall cost will be reduced.
+**Benefits of the chosen early stopping policy** : We then define our termination Policy for every run using **BanditPolicy** based
+on a slack factor  of 0.1. Bandit is based on slack factor/slack amount and evaluation interval. Bandit terminates runs where
+the primary metric is not within the specified slack factor/slack amount (in this case  = 0.1) compared to the best performing run.
+The early termination policy is applied at every interval when metrics are reported, starting at evaluation interval of 2. 
+Any run whose best metric is less than (1/(1+0.1) or 91% of the best performing run will be terminated. This means poorly
+performing will be terminated, so overall cost will be reduced.
 
 
 ## AutoML
