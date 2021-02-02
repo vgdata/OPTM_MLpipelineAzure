@@ -73,3 +73,7 @@ was longer for AutoML , which was approximatly 40 minutes, since it ran more mod
 
 In Logistic regression model, the accuracy was 0.911 and it was developed with hyperdrive.
 Here the execution time was  6 minutes, but accuracy was less.
+
+## Proof of cluster clean up
+I used used delete method of the compute object to remove the cluster. This helps to save cost on compute reesources.
+<img src ="Screenshots/Compute_delete.png" alt = "Compute delete>
