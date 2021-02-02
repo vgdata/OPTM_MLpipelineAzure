@@ -10,7 +10,7 @@ subscrible a fixed term deposit
 **The given dataset contains marketing data of a bank and the sample dataset is provided by Azure at:
 https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv
 
-Best Performing Model: In this given dataset, the best performing model was VotingEnsemble (using Auto ML) with the accuracy
+**Best Performing Model**: In this given dataset, the best performing model was VotingEnsemble (using Auto ML) with the accuracy
 of 0.9170, which is better than the the logistic regression model (using hyperdrive) with 0.911
 
 ## Scikit-learn Pipeline
@@ -34,7 +34,7 @@ taken to converge to  take full advantage of randomization.
  try different possible configuration with  'C' and 'max_iter' values, that tends
 to maximize primary metric in defined search space.
 
-Benefits of Random Parameter Sampling: Random Sampling is used to choose the hyperparameters as it is good for getting some values of hyperparameters
+**Random Parameter Sampling**: Random Sampling is used to choose the hyperparameters as it is good for getting some values of hyperparameters
 that one cannot guess intuitively. Random sampling would mean that we will cover most of the sample space and will get the best model.
 
 In random parameter sampling, hyperparameter values are randomly selected from the
@@ -57,7 +57,7 @@ After cleaning the data by one-hot encoding, training ans testing set were defin
 the best model was generated using **VotingEnsemble Algorithm** which involves summing the predictions made by multiple other
 classification models and give us an  **Accuracy of 0.9170**
 
-Voting Ensemble Algorithm: A voting ensemble is an ensemble machine learning model, which combines the predictions from
+**Voting Ensemble Algorithm**: A voting ensemble is an ensemble machine learning model, which combines the predictions from
 multiple other models. It can be used for classification (Predictions are the majority vote of contributing models.)
 or regression (Predictions are the average of contributing models). A Voting Ensemble is appropriate when multiple
 models perform well on the task and agree with the results. This algorithm treats all models same which means all models
