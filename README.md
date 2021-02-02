@@ -76,4 +76,4 @@ Here the execution time was  6 minutes, but accuracy was less.
 
 ## Proof of cluster clean up
 I used used delete method of the compute object to remove the cluster. This helps to save cost on compute reesources.
-<img src ="Screenshots/Compute_delete.png" alt = "compute_delete>
+<img src ="Screenshots/Compute_delete.png" alt = "compute_delete">
